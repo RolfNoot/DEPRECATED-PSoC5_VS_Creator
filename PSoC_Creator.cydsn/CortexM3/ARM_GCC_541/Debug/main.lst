@@ -1,0 +1,203 @@
+ARM GAS  C:\Users\Rolf\AppData\Local\Temp\ccox43UI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB0:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * DON'T USE THIS FILE!
+   4:main.c        ****  *
+   5:main.c        ****  * Use <project folder>/source/main.c
+   6:main.c        ****  *
+   7:main.c        ****  * ========================================
+   8:main.c        **** */
+   9:main.c        **** 
+  10:main.c        **** int main(void){}
+  28              		.loc 1 10 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              		.loc 1 10 0
+  34 0000 0020     		movs	r0, #0
+  35 0002 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE0:
+  38              		.size	main, .-main
+  39              		.text
+  40              	.Letext0:
+  41              		.section	.debug_info,"",%progbits
+  42              	.Ldebug_info0:
+  43 0000 3E000000 		.4byte	0x3e
+  44 0004 0400     		.2byte	0x4
+  45 0006 00000000 		.4byte	.Ldebug_abbrev0
+  46 000a 04       		.byte	0x4
+  47 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\Rolf\AppData\Local\Temp\ccox43UI.s 			page 2
+
+
+  48 000c 00000000 		.4byte	.LASF0
+  49 0010 0C       		.byte	0xc
+  50 0011 8E000000 		.4byte	.LASF1
+  51 0015 9A000000 		.4byte	.LASF2
+  52 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  53 001d 00000000 		.4byte	0
+  54 0021 00000000 		.4byte	.Ldebug_line0
+  55 0025 02       		.uleb128 0x2
+  56 0026 95000000 		.4byte	.LASF3
+  57 002a 01       		.byte	0x1
+  58 002b 0A       		.byte	0xa
+  59 002c 3A000000 		.4byte	0x3a
+  60 0030 00000000 		.4byte	.LFB0
+  61 0034 04000000 		.4byte	.LFE0-.LFB0
+  62 0038 01       		.uleb128 0x1
+  63 0039 9C       		.byte	0x9c
+  64 003a 03       		.uleb128 0x3
+  65 003b 04       		.byte	0x4
+  66 003c 05       		.byte	0x5
+  67 003d 696E7400 		.ascii	"int\000"
+  68 0041 00       		.byte	0
+  69              		.section	.debug_abbrev,"",%progbits
+  70              	.Ldebug_abbrev0:
+  71 0000 01       		.uleb128 0x1
+  72 0001 11       		.uleb128 0x11
+  73 0002 01       		.byte	0x1
+  74 0003 25       		.uleb128 0x25
+  75 0004 0E       		.uleb128 0xe
+  76 0005 13       		.uleb128 0x13
+  77 0006 0B       		.uleb128 0xb
+  78 0007 03       		.uleb128 0x3
+  79 0008 0E       		.uleb128 0xe
+  80 0009 1B       		.uleb128 0x1b
+  81 000a 0E       		.uleb128 0xe
+  82 000b 55       		.uleb128 0x55
+  83 000c 17       		.uleb128 0x17
+  84 000d 11       		.uleb128 0x11
+  85 000e 01       		.uleb128 0x1
+  86 000f 10       		.uleb128 0x10
+  87 0010 17       		.uleb128 0x17
+  88 0011 00       		.byte	0
+  89 0012 00       		.byte	0
+  90 0013 02       		.uleb128 0x2
+  91 0014 2E       		.uleb128 0x2e
+  92 0015 00       		.byte	0
+  93 0016 3F       		.uleb128 0x3f
+  94 0017 19       		.uleb128 0x19
+  95 0018 03       		.uleb128 0x3
+  96 0019 0E       		.uleb128 0xe
+  97 001a 3A       		.uleb128 0x3a
+  98 001b 0B       		.uleb128 0xb
+  99 001c 3B       		.uleb128 0x3b
+ 100 001d 0B       		.uleb128 0xb
+ 101 001e 27       		.uleb128 0x27
+ 102 001f 19       		.uleb128 0x19
+ 103 0020 49       		.uleb128 0x49
+ 104 0021 13       		.uleb128 0x13
+ARM GAS  C:\Users\Rolf\AppData\Local\Temp\ccox43UI.s 			page 3
+
+
+ 105 0022 11       		.uleb128 0x11
+ 106 0023 01       		.uleb128 0x1
+ 107 0024 12       		.uleb128 0x12
+ 108 0025 06       		.uleb128 0x6
+ 109 0026 40       		.uleb128 0x40
+ 110 0027 18       		.uleb128 0x18
+ 111 0028 9742     		.uleb128 0x2117
+ 112 002a 19       		.uleb128 0x19
+ 113 002b 00       		.byte	0
+ 114 002c 00       		.byte	0
+ 115 002d 03       		.uleb128 0x3
+ 116 002e 24       		.uleb128 0x24
+ 117 002f 00       		.byte	0
+ 118 0030 0B       		.uleb128 0xb
+ 119 0031 0B       		.uleb128 0xb
+ 120 0032 3E       		.uleb128 0x3e
+ 121 0033 0B       		.uleb128 0xb
+ 122 0034 03       		.uleb128 0x3
+ 123 0035 08       		.uleb128 0x8
+ 124 0036 00       		.byte	0
+ 125 0037 00       		.byte	0
+ 126 0038 00       		.byte	0
+ 127              		.section	.debug_aranges,"",%progbits
+ 128 0000 1C000000 		.4byte	0x1c
+ 129 0004 0200     		.2byte	0x2
+ 130 0006 00000000 		.4byte	.Ldebug_info0
+ 131 000a 04       		.byte	0x4
+ 132 000b 00       		.byte	0
+ 133 000c 0000     		.2byte	0
+ 134 000e 0000     		.2byte	0
+ 135 0010 00000000 		.4byte	.LFB0
+ 136 0014 04000000 		.4byte	.LFE0-.LFB0
+ 137 0018 00000000 		.4byte	0
+ 138 001c 00000000 		.4byte	0
+ 139              		.section	.debug_ranges,"",%progbits
+ 140              	.Ldebug_ranges0:
+ 141 0000 00000000 		.4byte	.LFB0
+ 142 0004 04000000 		.4byte	.LFE0
+ 143 0008 00000000 		.4byte	0
+ 144 000c 00000000 		.4byte	0
+ 145              		.section	.debug_line,"",%progbits
+ 146              	.Ldebug_line0:
+ 147 0000 33000000 		.section	.debug_str,"MS",%progbits,1
+ 147      02001D00 
+ 147      00000201 
+ 147      FB0E0D00 
+ 147      01010101 
+ 148              	.LASF0:
+ 149 0000 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 149      43313120 
+ 149      352E342E 
+ 149      31203230 
+ 149      31363036 
+ 150 0033 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 150      20726576 
+ 150      6973696F 
+ 150      6E203233 
+ARM GAS  C:\Users\Rolf\AppData\Local\Temp\ccox43UI.s 			page 4
+
+
+ 150      37373135 
+ 151 0066 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 151      66756E63 
+ 151      74696F6E 
+ 151      2D736563 
+ 151      74696F6E 
+ 152              	.LASF1:
+ 153 008e 6D61696E 		.ascii	"main.c\000"
+ 153      2E6300
+ 154              	.LASF3:
+ 155 0095 6D61696E 		.ascii	"main\000"
+ 155      00
+ 156              	.LASF2:
+ 157 009a 523A5C56 		.ascii	"R:\\VScode\\GIT\\PSoC5_VS_Creator\\PSoC_Creator.cyd"
+ 157      53636F64 
+ 157      655C4749 
+ 157      545C5053 
+ 157      6F43355F 
+ 158 00c9 736E00   		.ascii	"sn\000"
+ 159              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

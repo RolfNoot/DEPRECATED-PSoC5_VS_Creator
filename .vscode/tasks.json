@@ -1,0 +1,65 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "PSoC Config",
+            "type": "shell",
+            "args": [ "${workspaceRoot}/design/design.modus" ],
+            "options": {
+                "cwd": "${workspaceRoot}/design"
+            },
+            "command": "${env:ONETHINX_PACK_LOC}/tools_2.0/device-configurator/device-configurator",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "JLink_Power_Off",
+            "type": "shell",
+            "command": "jlinkexe -device CY8C5868xxxLP -if swd -speed 4000 -CommanderScript ${workspaceRoot}/config/power_off.jlink"
+        },
+        {
+            "label": "JLink_Power_On",
+            "type": "shell",
+            "command": "jlinkexe -device CY8C5868xxxLP -if swd -speed 4000 -CommanderScript ${workspaceRoot}/config/power_on.jlink"
+        },
+        // {
+        //     "label": "Check build",
+        //     "type": "shell",
+        //     "options": { "statusbar": { "hide" : true } },
+        //     "presentation": {
+        //         "echo": false,
+        //         "focus": false,
+        //         "reveal": "never",
+        //         "revealProblems": "always"                                  // Use "always" to default to the "problems" window or "never" to default to the "output" window after build.
+        //     },
+        //     "command" : "${env:ONETHINX_PACK_LOC}/config/scripts/prelaunch.bash ${command:cmake.build}",
+        //     "windows": {
+        //         "command": "${env:ONETHINX_PACK_LOC}/config/scripts/prelaunch.bat ${command:cmake.build}"
+        //     }
+        // },
+        {
+            "label": "UART Console",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            
+            "windows": {
+                "command": "${env:ONETHINX_TOOLS_LOC}/comsniff",            // Nice tool from https://github.com/klarsys/comsniff
+                "args": ["-d 4","-b 19200"],                                 // -d portnum   -b baudrate
+            },
+            "linux": {
+                "command": "screen",
+                "args": ["/dev/tty.usbserial-A603TZRU","9600"]
+            },
+            "osx": {
+                "command": "screen",
+                "args": ["/dev/tty.usbserial-A603TZRU","19200"],
+            }
+        }
+    ]
+}

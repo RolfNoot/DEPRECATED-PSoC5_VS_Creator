@@ -1,0 +1,123 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (CMSIS-DAP)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/${workspaceFolderBasename}.elf",         
+            "servertype": "openocd",
+            "serverpath": "${env:ONETHINX_TOOLS_LOC}/openocd/bin/openocd",
+            "searchDir": [ "${env:ONETHINX_TOOLS_LOC}/openocd/scripts" ],
+            "openOCDLaunchCommands": [
+                "tcl_port disabled",
+                "telnet_port disabled",
+                "adapter speed 500",
+                //"cmsis_dap_serial 141610F301237400",                          // Select debugger if you have multiple connected
+                "kitprog3 power_config on 3300"
+            ],
+            "configFiles": [
+               "interface/kitprog3.cfg",
+               "target/psoc5lp.cfg"
+            ],
+            "preLaunchCommands": [
+                "directory PSoC_Creator.cydsn/Generated_Source/PSoC5",          // Add location of source files built with PSoC Creator
+                "set mem inaccessible-by-default off",
+            ],
+            "postLaunchCommands": [
+                "monitor reg",
+                "monitor reset init"
+            ],
+            "postRestartCommands": [
+                "tbreak main",
+                "monitor reg",
+                "monitor reset init",
+            ],
+            "runToMain": true,                                                  // if true, program will halt at main. Not used for a restart     
+            "preLaunchTask": "${command:otx.preLaunch}",                        // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput": false,                                        // Shows output of GDB, helpful when something is not working right
+        },
+        {
+            "name": "Debug (J-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "device": "CY8C5868xxxLP",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/${workspaceFolderBasename}.elf",
+            //"debuggerArgs": ["-singlerun -strict -timeout 0 -nogui"],
+            "preLaunchTask": "${command:otx.preLaunch}",                        // Set this to run a task from tasks.json before starting a debug session
+            "interface": "swd",
+            "preLaunchCommands": [
+                "directory PSoC_Creator.cydsn/Generated_Source/PSoC5",          // Add location of source files built with PSoC Creator
+                "set mem inaccessible-by-default off",
+                "monitor speed 1000",
+                "monitor clrbp",
+                "monitor reset 0",
+                "monitor halt",
+                "monitor regs",
+                "monitor speed auto",
+                "monitor flash breakpoints 1",
+                "monitor semihosting enable"
+            ],
+            "postLaunchCommands": [
+                "monitor clrbp",
+                "monitor reset 2",
+                "monitor halt",
+                "monitor reset 0",
+                "tbreak main",
+                "monitor regs",
+                //"continue",                                                   // uncomment for breaking at main, comment for breaking at first instruction
+                //"monitor halt"                                                // uncomment for breaking at main, comment for breaking at first instruction
+            ],
+            "postRestartCommands": [
+                "monitor clrbp",
+                "monitor reset 2",
+                "monitor halt",
+                "monitor reset 0",
+                "tbreak main",
+                "monitor regs",
+                //"continue",
+                //"monitor halt",
+            ],
+            "runToMain": true,                                                  // if true, program will halt at main. Not used for a restart     
+        },
+        {
+            "name": "Debug (J-Link OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/${workspaceFolderBasename}.elf",         
+            "servertype": "openocd",
+            "serverpath": "${env:ONETHINX_TOOLS_LOC}/openocd/bin/openocd",
+            "searchDir": [ "${env:ONETHINX_TOOLS_LOC}/openocd/scripts" ],
+            "openOCDPreConfigLaunchCommands": [
+                "source [find interface/jlink.cfg]",
+                "transport select swd",
+                "tcl_port disabled",
+                "telnet_port disabled",
+                "adapter speed 500",
+            ],
+            "configFiles": [
+               "target/psoc5lp.cfg"
+            ],
+            "preLaunchCommands": [
+                "directory PSoC_Creator.cydsn/Generated_Source/PSoC5",          // Add location of source files built with PSoC Creator
+                "set mem inaccessible-by-default off",
+            ],
+            "postLaunchCommands": [
+                "monitor reg",
+                "monitor reset init"
+            ],
+            "postRestartCommands": [
+                "tbreak main",
+                "monitor reg",
+                "monitor reset init",
+            ],
+            "runToMain": true,                                                  // if true, program will halt at main. Not used for a restart     
+            "preLaunchTask": "${command:otx.preLaunch}",                        // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput": false,                                        // Shows output of GDB, helpful when something is not working right
+        }
+    ]
+}
