@@ -5,7 +5,6 @@ cmake-build*./**
 build/**
 .vscode/ipch*
 PSoC_Creator.cydsn/codegentemp/**
-PSoC_Creator.cydsn/CortexM0p/**
-PSoC_Creator.cydsn/CortexM4/**
+PSoC_Creator.cydsn/CortexM3/**
 PSoC_Creator.cydsn/PSoC_Creator.cyprj.Rolf
 PSoC_Creator.cydsn/PSoC_Creator.cywrk.Rolf
