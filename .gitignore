@@ -4,6 +4,7 @@ cmake-build*./**
 **/\.idea
 build/**
 .vscode/ipch*
-Onethinx_Creator.cydsn/codegentemp/**
-Onethinx_Creator.cydsn/CortexM0p/**
-Onethinx_Creator.cydsn/CortexM4/**
+PSoC_Creator.cydsn/codegentemp/**
+PSoC_Creator.cydsn/CortexM3/**
+PSoC_Creator.cydsn/PSoC_Creator.cyprj.Rolf
+PSoC_Creator.cydsn/PSoC_Creator.cywrk.Rolf
