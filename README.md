@@ -1,7 +1,10 @@
 # PSoC5_VS_Creator
 A Visual Studio Code 'project wrapper' for PSoC5 development using PSoC Creator for routing / system setup.
+<br/><br/>
+<em>For Windows, Linux, MacOs</em>
 
-The example project is a 'Kitt Scanner' using only a handfull of magnificent UDB blocks. Just connect 8 LED's to Port2.
+The example project is a 'Kitt Scanner' using only a handfull of magnificent UDB blocks. Just connect 8 LED's to Port2.<br/><br/>
+![Kitt Scanner](../../../assets/blob/main/PSoC5_VS_Creator/Kitt_Scanner.png?raw=true)<br/>
 
 Project structure:
 |Visual Studio Code Project|||
@@ -27,5 +30,9 @@ Project structure:
 1. Debug the project using the (Cortex-) Debug extension from the left bar.
     * depending on your debug adapter select "Debug CMSIS-DAP (OpenOCD)", "Debug J-Link" or "Debug J-Link (OpenOCD)" and press 'start'.
 ## Notes
+1. PSoC Creator is needed for the routing / system setup. A Windows environment is required to run PSoC Creator. PSoC Creator is only needed for the chip configuration (often a one-time setup).
 1. OpenOCD and J-Link don't support programming of ECC memory. Make sure the 'Store configuration data in ECC memory' setting in the Design Wide Resources (.cydwr) is disabled.
 1. The build process uses Cypress' cyelftool which is officialy built for Windows only. Included is a rebuilt version for MacOs, the binary for Linux can be built using the [C source files](https://www.cypress.com/documentation/software-and-drivers/elftool-open-source-foss-packages). Another possibility is to use Wine.
+1. PSoC Creator uses CyComponentLibrary.a from the PSoC Creator application folder. The postbuild action copies CyComponentLibrary.a from the PSoC Creator application folder to the project folder.
+<br/><br/>
+![PSoC5_VS_Creator](../../../assets/blob/main/PSoC5_VS_Creator/VS_Code_Creator.png?raw=true)<br/>
