@@ -27,7 +27,7 @@ set(TOOLS_DIR $ENV{ONETHINX_PACK_LOC}/tools_2.0)
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/source)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/config)
 set(CREATOR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/PSoC_Creator.cydsn)
-set(CREATOR_SOURCE_DIR ${CREATOR_DIR}/Generated_Source/PSoC5)   
+set(CREATOR_SOURCE_DIR ${CREATOR_DIR}/Generated_Source/PSoC5)
 
 if (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Windows")
     find_program (BASH_TOOL ${TOOLS_DIR}/bash/bash.exe DOC "The bash executable")
