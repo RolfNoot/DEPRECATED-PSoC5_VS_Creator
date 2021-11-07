@@ -9,3 +9,13 @@ PSoC_Creator.cydsn/CortexM3/**
 PSoC_Creator.cydsn/PSoC_Creator.cyprj.Rolf
 PSoC_Creator.cydsn/PSoC_Creator.cywrk.Rolf
 !PSoC_Creator.cydsn/CortexM3/ARM_GCC_541/Debug/PSoC_Creator.a
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
