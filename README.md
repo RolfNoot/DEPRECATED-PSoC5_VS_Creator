@@ -9,7 +9,7 @@ The example project is a 'Kitt Scanner' using only a handfull of magnificent UDB
 Project structure:
 |Visual Studio Code Project|||
 |---|---|---|
-||.vs|<em>visual code settings</em>|
+||.vs|<em>visual studio code settings</em>|
 ||build|<em>the build output for the project (project.elf & project.hex will be here)</em>|
 ||config|<em>additional files for VS Code setup / configuration</em>|
 ||PSoC_Creator.cydsn|<em>PSoC Creator project</em>|
