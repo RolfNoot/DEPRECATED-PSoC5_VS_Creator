@@ -32,7 +32,7 @@ Project structure:
 ## Notes
 1. PSoC Creator is needed for the routing / system setup. A Windows environment is required to run PSoC Creator. PSoC Creator is only needed for the chip configuration (often a one-time setup).
 1. OpenOCD and J-Link don't support programming of ECC memory. Make sure the 'Store configuration data in ECC memory' setting in the Design Wide Resources (.cydwr) is disabled.
-1. The build process uses Cypress' cyelftool which is officialy built for Windows only. Included is a rebuilt version for MacOs, the binary for Linux can be built using the [C source files](https://www.cypress.com/documentation/software-and-drivers/elftool-open-source-foss-packages). Another possibility is to use Wine.
+1. The build process uses Cypress' cyelftool which is officialy built for Windows only. Included is a rebuilt version for MacOs, the binary for Linux can be built using the C source files [here](https://www.cypress.com/documentation/software-and-drivers/elftool-open-source-foss-packages) or [here](https://github.com/RolfNoot/assets/blob/main/PSoC5_VS_Creator/Infineon-CyElfTool-1.0.1.8.zip_(includes_libelf-0.8.13-patch2)-DevelopmentTools-v01_00-EN.zip?raw=true). Another possibility is to use Wine.
 1. PSoC Creator uses CyComponentLibrary.a from the PSoC Creator application folder. The postbuild action copies CyComponentLibrary.a from the PSoC Creator application folder to the project folder.
 <br/><br/>
 ![PSoC5_VS_Creator](../../../assets/blob/main/PSoC5_VS_Creator/VS_Code_Creator.png?raw=true)<br/>
