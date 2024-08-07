@@ -1,4 +1,4 @@
-# PSoC5_VS_Creator
+# DEPRECATED!  PSoC5_VS_Creator
 A Visual Studio Code 'project wrapper' for PSoC5 development using PSoC Creator for routing / system setup.
 <br/><br/>
 <em>For Windows, Linux, MacOs</em>
